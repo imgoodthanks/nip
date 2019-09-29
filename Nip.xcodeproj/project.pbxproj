@@ -14,7 +14,8 @@
 		880181F3233FF54900E01057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 880181F1233FF54900E01057 /* Main.storyboard */; };
 		880181FF233FF54900E01057 /* NipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880181FE233FF54900E01057 /* NipTests.swift */; };
 		8801820A233FF54900E01057 /* NipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88018209233FF54900E01057 /* NipUITests.swift */; };
-		8801821A234002E200E01057 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88018219234002E200E01057 /* SpaceView.swift */; };
+		8801821A234002E200E01057 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88018219234002E200E01057 /* Space.swift */; };
+		8853C4D423414B55001B4266 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853C4D323414B55001B4266 /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,8 @@
 		88018205233FF54900E01057 /* NipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88018209233FF54900E01057 /* NipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NipUITests.swift; sourceTree = "<group>"; };
 		8801820B233FF54900E01057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88018219234002E200E01057 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
+		88018219234002E200E01057 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		8853C4D323414B55001B4266 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		880181DD233FF54800E01057 = {
 			isa = PBXGroup;
 			children = (
+				8853C4D223414697001B4266 /* App */,
 				880181E8233FF54800E01057 /* Nip */,
 				880181FD233FF54900E01057 /* NipTests */,
 				88018208233FF54900E01057 /* NipUITests */,
@@ -103,7 +106,6 @@
 				880181E9233FF54800E01057 /* AppDelegate.swift */,
 				880181EB233FF54800E01057 /* ViewController.swift */,
 				880181ED233FF54800E01057 /* Document.swift */,
-				88018219234002E200E01057 /* SpaceView.swift */,
 				880181EF233FF54900E01057 /* Assets.xcassets */,
 				880181F1233FF54900E01057 /* Main.storyboard */,
 				880181F4233FF54900E01057 /* Info.plist */,
@@ -128,6 +130,15 @@
 				8801820B233FF54900E01057 /* Info.plist */,
 			);
 			path = NipUITests;
+			sourceTree = "<group>";
+		};
+		8853C4D223414697001B4266 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				88018219234002E200E01057 /* Space.swift */,
+				8853C4D323414B55001B4266 /* Shape.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8853C4D423414B55001B4266 /* Shape.swift in Sources */,
 				880181EC233FF54800E01057 /* ViewController.swift in Sources */,
 				880181EA233FF54800E01057 /* AppDelegate.swift in Sources */,
-				8801821A234002E200E01057 /* SpaceView.swift in Sources */,
+				8801821A234002E200E01057 /* Space.swift in Sources */,
 				880181EE233FF54800E01057 /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

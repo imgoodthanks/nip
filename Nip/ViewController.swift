@@ -9,11 +9,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+        
+    @IBOutlet var shapeArray: NSArrayController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.view.wantsLayer = true
     }
 
     override var representedObject: Any? {
