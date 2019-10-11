@@ -12,9 +12,9 @@ class Shape : NSObject {
     
     // a relative origin point
     var origin = CGPoint(x: 0, y: 0)
-    var delegate: Any?
     
-    override func init(origin: CGPoint) -> Shape {
-        
+    init(origin: CGPoint) {
+        print("\(origin)")
+        self.origin = origin
     }
 }

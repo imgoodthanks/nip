@@ -708,13 +708,13 @@
                 <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Nip" customModuleProvider="target" sceneMemberID="viewController">
                     <scrollView key="view" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6zT-PP-jwy">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="n9i-Nt-x2n">
                             <rect key="frame" x="1" y="1" width="448" height="298"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view id="vDP-QP-LR1" customClass="Space" customModule="Nip" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="433" height="283"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="451" height="299"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                             </subviews>
@@ -729,15 +729,11 @@
                         </scroller>
                     </scrollView>
                     <connections>
-                        <outlet property="shapeArray" destination="4XF-UQ-bc3" id="5a5-yX-P3m"/>
+                        <outlet property="shapeArray" destination="4XF-UQ-bc3" id="TdG-vH-v1Q"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController id="4XF-UQ-bc3">
-                    <connections>
-                        <binding destination="5gI-5U-AMq" name="contentArray" keyPath="self.shapes" id="HLb-dm-BaI"/>
-                    </connections>
-                </arrayController>
+                <arrayController id="4XF-UQ-bc3"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
