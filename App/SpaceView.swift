@@ -1,5 +1,5 @@
 //
-//  Space.swift
+//  SpaceView.swift
 //  Nip
 //
 //  Created by Public on 9/28/19.
@@ -9,25 +9,31 @@
 import Cocoa
 
 let DOUBLE_CLICK_COUNT = 2
+let DEBUG_DRAW_FADE_TIME = 1.0
 
-class Space: NSView {
+class SpaceView: NSView {
     
     var shapes: [Shape] = []
     var cachePath: NSBezierPath = NSBezierPath()
     var debugDraw = false
     
     override func draw(_ dirtyRect: NSRect) {
-        print("Space.draw")
+        print("SpaceView.draw")
         
         // draw the background
         let gradient = NSGradient.init(starting: NSColor.darkGray, ending: NSColor.gray)
         gradient?.draw(in: dirtyRect, angle: 90.0)
         
         // draw a debug outline
+        // ...then fade it out
         if self.debugDraw {
             NSColor.blue.set()
             cachePath.fill()
             self.debugDraw = false
+            
+            let timer = Timer.scheduledTimer(withTimeInterval: DEBUG_DRAW_FADE_TIME, repeats: false) {
+                timer in self.needsDisplay = true
+            }
             
             return
         }
@@ -58,7 +64,7 @@ class Space: NSView {
     
     override func mouseUp(with event: NSEvent) {
         if cachePath.contains(event.locationInWindow) {
-            print("Space.mouseUp cachePath has event.locationInWindow")
+            print("SpaceView.mouseUp cachePath has event.locationInWindow")
             
             self.debugDraw = true
             self.needsDisplay = true
@@ -77,7 +83,7 @@ class Space: NSView {
         self.shapes.append(newShape)
         self.needsDisplay = true
         
-        print("Space.doubleClick \(newShape)")
+        print("SpaceView.doubleClick \(newShape)")
     }
     
     func mouseUpDoubleClick(event: NSEvent) {
